@@ -1,0 +1,54 @@
+:root {
+	/* Colors */
+	--primary: #2563eb;
+	--secondary: #3b82f6;
+	--success: #22c55e;
+	--danger: #ef4444;
+	/* Light mode surfaces */
+	--background: #f8fafc;
+	--surface: #ffffff; /* cards, panels */
+	--muted: #f1f5f9; /* form inputs, secondary panels */
+	/* Text */
+	--text: #1e293b;
+	--text-secondary: #64748b;
+	/* Borders & shadows */
+	--border: #e2e8f0;
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	/* Button text on colored backgrounds */
+	--btn-text-on-primary: #ffffff;
+}
+
+body.dark-mode {
+	/* Core backgrounds */
+	--background: #121212; /* deep background */
+	--surface: #1E1E1E; /* cards, panels */
+	--muted: #2C2C2C; /* inputs, secondary panels */
+	/* Text */
+	--text: #E0E0E0; /* primary text */
+	--text-secondary: #A0A0A0; /* labels, captions */
+	/* Accents */
+	--primary: #BB86FC; /* mellow purple */
+	--secondary: #03DAC6; /* teal accent */
+	--success: #03DAC6; /* same teal for success */
+	--danger: #CF6679; /* warm red */
+	/* Borders & shadows */
+	--border: #373737; /* subtle divider */
+	--shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+	/* Button text on colored backgrounds */
+	--btn-text-on-primary: #121212;
+}
+
+/* Global Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+	background: var(--background);
+	color: var(--text);
+	min-height: 100vh;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}

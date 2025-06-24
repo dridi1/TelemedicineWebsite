@@ -1,0 +1,129 @@
+.user-initial {
+    width: 2rem;                /* 32px */
+    height: 2rem;               /* 32px */
+    border: 2px solid #dee2e6;  /* light border to separate from background */
+    font-weight: 600;           /* semi-bold */
+    font-size: 1rem;            /* 16px */
+    }
+.nunito-header {
+	font-family: "Nunito", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.hero-section {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.hero-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	z-index: 1;
+}
+
+.feature-card {
+	transition: transform 0.4s, box-shadow 0.4s;
+	border-radius: 1rem;
+}
+
+.feature-card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15) !important;
+}
+
+.testimonial-card {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	border-radius: 1rem;
+}
+
+.hover-underline {
+	position: relative;
+	font-weight: 600;
+	color: #000 !important;
+}
+
+.hover-underline::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #0d6efd;
+	transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+	width: 100%;
+}
+
+.hover-underline:hover {
+	color: #0d6efd !important;
+}
+
+.chat-bubble {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	z-index: 1000;
+	animation: float 3s ease-in-out infinite;
+}
+
+.chat-icon {
+	width: 60px;
+	height: 60px;
+	background: #dc3545;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 8px 24px rgba(220, 53, 69, 0.3);
+	transition: all 0.3s ease;
+}
+
+.chat-icon i {
+	color: white;
+	font-size: 1.8rem;
+}
+
+.chat-link:hover .chat-icon {
+	transform: scale(1.1);
+	box-shadow: 0 12px 32px rgba(220, 53, 69, 0.4);
+}
+
+.chat-pulse {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background: rgba(220, 53, 69, 0.2);
+	animation: pulse 2s infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}	
+
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .chat-bubble {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    .chat-icon {
+        width: 50px;
+        height: 50px;
+    }
+}

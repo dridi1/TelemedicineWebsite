@@ -1,0 +1,1 @@
+psql -U postgres -d telemedicinedb -f "C:\Users\naji2\Documents\schema.sql"     7ot path bta schema.sql bach ya3tik nafs tables ili 3amelhom ina 

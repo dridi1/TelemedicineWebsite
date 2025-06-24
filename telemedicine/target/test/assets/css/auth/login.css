@@ -1,0 +1,68 @@
+/* Login-specific CSS */
+.auth-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-image {
+  flex: 1;
+  width: 400px;
+  height: 700px;
+  display: none; /* Hidden on mobile */
+}
+
+/* Password toggle styles */
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+  color: #6a11cb;
+}
+
+/* Role Badge */
+.role-badge {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: rgba(106, 17, 203, 0.1);
+  color: #6a11cb;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Role Selection Dropdown */
+.role-select {
+  margin-bottom: 20px;
+}
+
+.role-select .form-select {
+  border-radius: 10px;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.role-select .form-select:focus {
+  border-color: #6a11cb;
+  box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  .auth-image {
+    display: block;
+  }
+}
